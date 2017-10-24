@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT computador (processador|marca|modelo|cor)*>
+<!ELEMENT processador (numeroDeSerie|geracao|descricao)*>
+<!ELEMENT marca (#PCDATA)>
+<!ELEMENT modelo (#PCDATA)>
+<!ELEMENT cor (#PCDATA)>
+<!ELEMENT numeroDeSerie (#PCDATA)>
+<!ELEMENT geracao (#PCDATA)>
+<!ELEMENT descricao (#PCDATA)>

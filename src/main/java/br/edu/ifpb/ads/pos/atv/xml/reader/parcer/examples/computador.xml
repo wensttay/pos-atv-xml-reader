@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<computador 
+    xmlns="http://www.w3schools.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.w3schools.com computador.xsd">
+
+    <marca>Microsoft</marca>
+    <modelo>Japones</modelo>
+    <cor>Silver</cor>
+    <processador>
+        <numeroDeSerie>2932</numeroDeSerie>
+        <geracao>Decima</geracao>
+        <descricao>Gamer</descricao>
+    </processador>
+    
+</computador>

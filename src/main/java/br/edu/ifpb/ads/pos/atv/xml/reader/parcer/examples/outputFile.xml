@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<computador xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com computador.xsd">
+    <marca>Apple</marca>
+    <modelo>X1</modelo>
+    <cor>Black</cor>
+    <processador>
+        <numeroDeSerie>2001</numeroDeSerie>
+        <geracao>Quinta</geracao>
+        <descricao>Potente</descricao>
+    </processador>
+</computador>

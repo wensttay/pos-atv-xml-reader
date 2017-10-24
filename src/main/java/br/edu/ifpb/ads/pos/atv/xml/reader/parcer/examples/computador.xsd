@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.w3schools.com"
+           xmlns="http://www.w3schools.com"
+           elementFormDefault="qualified">
+    
+    <xs:element name="computador">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="marca" type="xs:string"/>
+                <xs:element name="modelo" type="xs:string"/>
+                <xs:element name="cor" type="xs:string"/>
+                <xs:element ref="processador" minOccurs='1' maxOccurs='unbounded'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="processador">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numeroDeSerie" type="xs:string"/>
+                <xs:element name="geracao" type="xs:string"/> 
+                <xs:element name="descricao" type="xs:string"/> 
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
