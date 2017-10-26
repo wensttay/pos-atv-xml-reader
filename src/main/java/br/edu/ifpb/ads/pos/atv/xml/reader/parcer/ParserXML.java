@@ -1,5 +1,7 @@
 package br.edu.ifpb.ads.pos.atv.xml.reader.parcer;
 
+import java.io.File;
+
 /**
  *
  * @author Wensttay de Sousa Alencar <yattsnew@gmail.com>
@@ -9,6 +11,6 @@ public interface ParserXML<T> {
 
     public void toXML(T obj);
 
-    public T toObject();
+    public T toObject(File xmlFile);
 
 }

@@ -12,9 +12,6 @@ import java.io.File;
  */
 public class ParserXstream implements ParserXML<Computador> {
     
-    File computadorXml = new File("src/main/java/br/edu/ifpb/ads/pos/atv/xml/reader"
-            + "/parcer/examples/computador.xml");
-    
     private final XStream stream;
 
     public ParserXstream() {
@@ -24,9 +21,8 @@ public class ParserXstream implements ParserXML<Computador> {
     }
     
     @Override
-    public Computador toObject() {
-        File file = computadorXml;
-        Computador computador = (Computador) stream.fromXML(file);
+    public Computador toObject(File computadorXmlFile) {
+        Computador computador = (Computador) stream.fromXML(computadorXmlFile);
         System.out.println(computador);
         return computador;
     }

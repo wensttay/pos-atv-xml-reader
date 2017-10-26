@@ -21,15 +21,12 @@ import org.xml.sax.SAXException;
 public class ParserJAXB implements ParserXML<Computador> {
 
     File computadorXsd = new File("src/main/java/br/edu/ifpb/ads/pos/atv/xml/reader"
-            + "/parcer/examples/computador.xsd");
-    File computadorXml = new File("src/main/java/br/edu/ifpb/ads/pos/atv/xml/reader"
-            + "/parcer/examples/computador.xml");
+            + "/files/computador.xsd");
     File outputFile = new File("src/main/java/br/edu/ifpb/ads/pos/atv/xml/reader"
-            + "/parcer/examples/outputFile.xml");
-    
+            + "/files/outputFile.xml");
     
     @Override
-    public Computador toObject() {
+    public Computador toObject(File computadorXmlFile) {
 
         try {
             SchemaFactory schemaFactory = SchemaFactory
@@ -38,10 +35,10 @@ public class ParserJAXB implements ParserXML<Computador> {
                     .newSchema(computadorXsd);
 
             JAXBContext jaxbContext = JAXBContext.newInstance(Computador.class);
-            Unmarshaller marshaller = jaxbContext.createUnmarshaller();
-            marshaller.setSchema(schema);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            unmarshaller.setSchema(schema);
 
-            Computador computador = (Computador) marshaller.unmarshal(computadorXml);
+            Computador computador = (Computador) unmarshaller.unmarshal(computadorXmlFile);
             System.out.println(computador);
 
             return computador;

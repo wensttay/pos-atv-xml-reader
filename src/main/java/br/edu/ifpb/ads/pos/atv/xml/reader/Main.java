@@ -2,8 +2,9 @@ package br.edu.ifpb.ads.pos.atv.xml.reader;
 
 import br.edu.ifpb.ads.pos.atv.xml.reader.model.Computador;
 import br.edu.ifpb.ads.pos.atv.xml.reader.model.Processador;
-import br.edu.ifpb.ads.pos.atv.xml.reader.parcer.ParserJAXB;
 import br.edu.ifpb.ads.pos.atv.xml.reader.parcer.ParserXML;
+import br.edu.ifpb.ads.pos.atv.xml.reader.parcer.ParserXstream;
+import java.io.File;
 
 /**
  *
@@ -13,12 +14,16 @@ import br.edu.ifpb.ads.pos.atv.xml.reader.parcer.ParserXML;
 public class Main {
 
     public static void main(String[] args) {
-        Processador processador = new  Processador("2001", "Quinta", "Potente");
+        File computadorXmlFile = new File("src/main/java/br/edu/ifpb/ads/pos/atv/xml/reader"
+                + "/files/computador.xml");
+        
+        Processador processador = new Processador("2001", "Quinta", "Potente");
         Computador computador = new Computador("Apple", "X1", "Black", processador);
 
-        ParserXML parser = new ParserJAXB();
-//        ParserXML parser = new ParserXstream();
+//        ParserXML parser = new ParserJAXB();
+        ParserXML parser = new ParserXstream();
+
         parser.toXML(computador);
-        parser.toObject();
+        parser.toObject(computadorXmlFile);
     }
 }

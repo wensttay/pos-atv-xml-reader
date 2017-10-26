@@ -1,2 +1,3 @@
 # pos-atv-xml-reader
-Simple JAXB and Xstream to parcer a XML in JAVA
+A simple java project showing two ways to parse XML files to Objects and vice versa (JAXB and XStream)
+
